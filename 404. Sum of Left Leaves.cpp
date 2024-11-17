@@ -39,24 +39,3 @@ public:
     }
 };
 
-int main() {
-    // Example of usage:
-    // Construct a binary tree.
-    TreeNode* root = new TreeNode(3);
-    root->left = new TreeNode(9);
-    root->right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
-
-    Solution solution;
-    // Calculate the sum of all left leaves in the binary tree.
-    std::cout << "Sum of left leaves: " << solution.sumOfLeftLeaves(root) << std::endl;
-
-    // Don't forget to delete allocated memory to avoid memory leaks.
-    // This is just a quick example and does not delete the entire tree.
-    delete root->right->left;
-    delete root->right->right;
-    delete root->right;
-    delete root->left;
-    delete root;
-
-    return 0;
-}
